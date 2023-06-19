@@ -17,15 +17,16 @@
   <p class="text-left">Nuestro staff esta compuesto por un grupo de personas jovenes, algunos estudiantes de periodismo, otros en las puertas de su recibimiento en la carrera ,otros con la carrera consolidada y al frente de una inmejorable oportunidad para crecer con el tiempo,  a todos estos los une la conjugacion de las dos palabras en comun que dieron origen a esta idea. Tenemos a su disposición Nuestros contenidos se rigen con una amplia variedad de temas y le es util a quien quiera hacer sus primeras armas en el mundo del periodismo o bien para otro publico el cual simplementa quiera dar a conocer su voz en este ambiente.</p>
   <h3 class="text-center my-5">Por que descargarse nuestra aplicacion</h3>
         
-<v-list lines="one">
+<v-list>
   <v-list-item
     v-for="item in items"
     :key="item.title"
     :title="item.title"
     :src="item.img"
   >
-  <p>{{item.texto}} </p>
   <img class="col" v-bind:src="item.img" v-bind:alt="item.alt"/>
+  <p>{{item.texto}} </p>
+  
 </v-list-item>
 </v-list>
 
