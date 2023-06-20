@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center">
+
       <v-col class="mb-4">
         <h1 class="text-center my-5">Bienvenidos a Prenpub</h1>
   <p class="text-left">Te damos la bienvenida a nuestra aplicacion dedicada exclusivamente para quienes buscan proyectar su propio espacio abocado al publico para difundir y compartir sus opiniones e intereses , dedicado especificamente a aquel quien siente que merece ser leido entre mas usuarios.</p>

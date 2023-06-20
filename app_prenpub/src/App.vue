@@ -1,53 +1,66 @@
 <template>
   <v-app>
+ 
     <v-img
           :src="require('./assets/prenpublogo.png')"
           class="my-3"
           contain
           height="300"
         />
-        <v-row justify="space-around">
-    <v-menu
-      v-for="([text, rounded], index) in btns"
-      :key="text"
-      :rounded="rounded"
-      offset-y
-    >
-      <template v-slot:activator="{ attrs, on }">
+        <v-sheet
+    height="400"
+    class="overflow-hidden"
+    style="position: relative;"
+  >
+    <v-container class="fill-height">
+      <v-row
+        align="center"
+        justify="center"
+      >
         <v-btn
-          :color="colors[index]"
-          class="white--text ma-5"
-          v-bind="attrs"
-          v-on="on"
+          color="black"
+          dark
+          @click.stop="drawer = !drawer"
         >
-          {{ text }} Radius
+          Menu
         </v-btn>
-      </template>
+      </v-row>
+    </v-container>
 
-      <v-list>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-divider></v-divider>
+
+      <v-list dense>
         <v-list-item
           v-for="item in items"
-          :key="item"
+          :key="item.title"
           link
         >
-          <v-list-item-title v-text="item"></v-list-item-title>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-menu>
-  </v-row>
+    </v-navigation-drawer>
+  </v-sheet>
 
 
-    <nav class="nav nav-pills nav-fill">
-    <ul :class="{barraNav}">
-    <li class="nav-item"><router-link to="/" >Home</router-link></li>   
-    <li class="nav-item"><router-link to="/ver">Noticias </router-link></li>
-    </ul>
-      </nav>
-
-
-    <v-main>
+  <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/ver">Noticias</router-link> |
+  </nav>
+  <v-main>
       <router-view/>
-    </v-main>
+  </v-main>
+
     <v-footer class="v-footer black">
     <v-row justify="center" no-gutters>
       <v-col class="white--text text-center mt-4" cols="12">
@@ -64,10 +77,19 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    drawer: null,
+        items: [
+          { title: 'Home', link: '/' },
+          { title: 'Noticias', link: '/ver' },
+        ],
   }),
 };
 </script>
 <style>
+body {
+    min-height: 100vh;
+    background: #e5e5e5;
+}
+
 
 </style>
