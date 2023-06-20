@@ -1,15 +1,6 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/prenpublogo.png')"
-          class="my-3"
-          contain
-          height="300"
-        />
-      </v-col>
-
       <v-col class="mb-4">
         <h1 class="text-center my-5">Bienvenidos a Prenpub</h1>
   <p class="text-left">Te damos la bienvenida a nuestra aplicacion dedicada exclusivamente para quienes buscan proyectar su propio espacio abocado al publico para difundir y compartir sus opiniones e intereses , dedicado especificamente a aquel quien siente que merece ser leido entre mas usuarios.</p>
@@ -19,7 +10,7 @@
         
 <v-list>
   <v-list-item
-    v-for="item in items"
+    v-for="item in tips"
     :key="item.title"
     :title="item.title"
     :src="item.img"
@@ -40,7 +31,7 @@
     name: 'HelloWorld',
 
     data: () => ({
-      items: [
+      tips: [
         {
 					title: "Alcance", 
 					img: require('../assets/alcance.jpg'), 
