@@ -3,7 +3,7 @@
  
     <v-img
           :src="require('./assets/prenpublogo.png')"
-          class="my-3"
+          class="my-2"
           contain
           height="300"
         />
@@ -14,11 +14,11 @@
   >
     <v-container class="fill-height">
       <v-row
-        align="center"
-        justify="center"
+      justify="space-around"
       >
         <v-btn
           color="black"
+          class="white--text ma-5"
           dark
           @click.stop="drawer = !drawer"
         >
@@ -40,12 +40,13 @@
           :key="item.title"
           link
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>
+              <router-link :to="item.link"
+              class="black--text text-decoration-none">
+                {{ item.title }}
+              </router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -53,10 +54,6 @@
   </v-sheet>
 
 
-  <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/ver">Noticias</router-link> |
-  </nav>
   <v-main>
       <router-view/>
   </v-main>
@@ -80,7 +77,7 @@ export default {
     drawer: null,
         items: [
           { title: 'Home', link: '/' },
-          { title: 'Noticias', link: '/ver' },
+          { title: 'Noticias', link: '/noticias' },
         ],
   }),
 };
