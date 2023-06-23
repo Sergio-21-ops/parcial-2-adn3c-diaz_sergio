@@ -77,7 +77,7 @@ export default {
     drawer: null,
         items: [
           { title: 'Home', link: '/' },
-          { title: 'Noticias', link: '/noticias' },
+          { title: 'Noticias', link: '/ver' },
         ],
   }),
 };

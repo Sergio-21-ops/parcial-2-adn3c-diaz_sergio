@@ -1,5 +1,16 @@
 <template>
-    <div class="contact">
-      <h1>This is a contact page</h1>
-    </div>
+    <ver-componente />
   </template>
+  
+  <script>
+    import VerComponente from '../components/VerComponente'
+  
+    export default {
+      name: 'Noticias-view',
+  
+      components: {
+        VerComponente,
+      },
+    }
+  </script>
+  
