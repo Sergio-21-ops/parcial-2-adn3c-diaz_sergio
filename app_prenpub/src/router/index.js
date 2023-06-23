@@ -15,6 +15,11 @@ const routes = [
     name: 'noticias',
     component: () => import(/* webpackChunkName: "about" */ '../views/NoticiasView.vue')
   },
+  {
+    path: '/publicar',
+    name: 'formulario',
+    component: () => import(/* webpackChunkName: "about" */ '../components/PublicarComponente.vue')
+  },
 ]
 
 const router = new VueRouter({
