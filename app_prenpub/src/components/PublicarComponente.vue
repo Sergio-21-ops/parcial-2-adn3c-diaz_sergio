@@ -1,19 +1,26 @@
 <template>
     <v-sheet max-width="300" class="mx-auto">
-    <v-form validate-on="submit lazy" @submit.prevent="submit">
+<v-form fast-fail @submit.prevent>
       <v-text-field
-        v-model="userName"
-        :rules="rules"
-        label="User name"
+        v-model="form_data.titulo"
+        label="Titulo de la noticia"
       ></v-text-field>
 
-      <v-btn
-        :loading="loading"
-        type="submit"
-        block
-        class="mt-2"
-        text="Submit"
-      ></v-btn>
+      <v-text-field
+        v-model="form_data.autor"
+        label="Autor"
+      ></v-text-field>
+
+      <v-text-field
+        v-model="form_data.sinopsis"
+        label="Sinopsis"
+      ></v-text-field>
+
+      <v-text-field
+        v-model="form_data.descripcion"
+        label="Descripcion"
+      ></v-text-field>
+      <v-btn type="submit" block class="mt-2" @click="guardar(form_data)" value="Guardar">Submit</v-btn>
     </v-form>
   </v-sheet>
   </template>
@@ -33,5 +40,7 @@
 		verificar:true,
 		arr:[]
     }}}
+
+    
   </script>
   
