@@ -85,4 +85,19 @@
 	}
     }
   </script>
-  
+  <style>
+.X {
+  color: #fff;
+  float: right;
+    background: black;
+    height: 2em;
+    top: 10px;
+    width: 2em;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 1em;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+}
+</style>
