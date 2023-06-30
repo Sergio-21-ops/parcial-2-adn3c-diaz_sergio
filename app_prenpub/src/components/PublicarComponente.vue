@@ -8,6 +8,12 @@
       <v-text-field v-model="form_data.sinopsis" label="Sinopsis"></v-text-field>
 
       <v-text-field v-model="form_data.descripcion" label="Descripcion"></v-text-field>
+
+      <v-select
+      v-model="form_data.select"
+      :items="items"
+      label="Item"></v-select>
+    
       <v-btn type="submit" block class="mt-2" @click="guardar(form_data)" value="Guardar">Enviar</v-btn>
     </v-form>
     
@@ -24,7 +30,13 @@ export default {
         titulo: "",
         autor: "",
         cuerpo: "",
-        sinopsis: "",
+        select: null,
+      items: [
+        'Item 1',
+        'Item 2',
+        'Item 3',
+        'Item 4',
+      ],
       },
       verificar: true,
       arr: []
