@@ -18,7 +18,7 @@
       <v-btn type="submit" block class="mt-2" @click="guardar(form_data)" value="Guardar">Enviar</v-btn>
     </v-form>
 
-    <v-row :class="verificar ? 'classBien' : 'classError'">
+  <v-row :class="verificar ? 'classBien' : 'classError'">
     <v-dialog
       v-model="dialog"
       max-width="290"      
