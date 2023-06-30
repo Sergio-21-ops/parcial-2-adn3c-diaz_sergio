@@ -19,7 +19,7 @@
     <v-card-subtitle>{{item.autor}}</v-card-subtitle>
     <v-card-text>{{item.sinopsis}}</v-card-text>        
     <v-card-text>{{item.descripcion}}</v-card-text>
-	<v-card-text>{{item.select}}</v-card-text>
+    <v-card-text>{{item.select}}</v-card-text>      
 
                   
             

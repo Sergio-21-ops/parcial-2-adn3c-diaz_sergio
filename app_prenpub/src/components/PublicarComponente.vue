@@ -1,5 +1,5 @@
 <template>
-  <v-sheet max-width="300" class="mx-auto">
+  <v-sheet max-width="400" class="mx-auto">
     <v-form fast-fail @submit.prevent>
       <v-text-field v-model="form_data.titulo" label="Titulo de la noticia"></v-text-field>
 
@@ -10,13 +10,14 @@
       <v-text-field v-model="form_data.descripcion" label="Descripcion"></v-text-field>
 
       <v-select
-      v-model="form_data.select"
-      :items="items"
-      label="Item"></v-select>
-    
+          v-model="form_data.seleccion"
+          :items="items"
+          label="Seleccion"
+        ></v-select>
+
       <v-btn type="submit" block class="mt-2" @click="guardar(form_data)" value="Guardar">Enviar</v-btn>
     </v-form>
-    
+
   </v-sheet>
 </template>
   
@@ -30,14 +31,9 @@ export default {
         titulo: "",
         autor: "",
         cuerpo: "",
-        select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
-      ],
+        seleccion: null,
       },
+      items: ['Drama', 'Deportes', 'Sociedad', 'Cine', 'Otros'],
       verificar: true,
       arr: []
     }
@@ -84,4 +80,9 @@ export default {
 
 
 </script>
+<style>
+.v-sheet{
+  padding: 1em;
+}
+</style>
   

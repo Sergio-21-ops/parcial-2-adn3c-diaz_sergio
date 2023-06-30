@@ -8,7 +8,7 @@
           height="300"
         />
         <v-sheet
-    height="400"
+    height="200"
     class="overflow-hidden"
     style="position: relative;"
   >
@@ -87,6 +87,4 @@ body {
     min-height: 100vh;
     background: #e5e5e5;
 }
-
-
 </style>
