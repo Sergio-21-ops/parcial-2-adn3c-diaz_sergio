@@ -51,7 +51,8 @@ export default {
       form_data: {
         titulo: "",
         autor: "",
-        cuerpo: "",
+        sinopsis: "",
+        descripcion: "",
         seleccion: null,
       },
       items: ['Drama', 'Deportes', 'Sociedad', 'Cine', 'Otros'],
