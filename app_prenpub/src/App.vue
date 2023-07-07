@@ -1,31 +1,15 @@
 <template>
   <v-app>
  
-    <v-img
-          :src="require('./assets/prenpublogo.png')"
-          class="my-2"
-          contain
-          height="300"
-        />
-        <v-sheet
-    height="200"
-    class="overflow-hidden"
-    style="position: relative;"
-  >
-    <v-container class="fill-height">
-      <v-row
-      justify="space-around"
-      >
-        <v-btn
-          color="black"
-          class="white--text ma-5"
+    <v-app-bar
+          app
           dark
-          @click.stop="drawer = !drawer"
-        >
-          Menu
-        </v-btn>
-      </v-row>
-    </v-container>
+      >
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <nav>
+        </nav>
+      </v-app-bar>
+
 
     <v-navigation-drawer
       v-model="drawer"
@@ -51,10 +35,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </v-sheet>
+
 
 
   <v-main>
+    <v-img
+          :src="require('./assets/prenpublogo.png')"
+          class="my-2"
+          contain
+          height="175"
+        />
       <router-view/>
   </v-main>
 
