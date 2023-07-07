@@ -1,4 +1,5 @@
 <template>
+   <v-container>
   <v-sheet max-width="400" class="mx-auto">
     <v-form fast-fail @submit.prevent>
       <v-text-field v-model="form_data.titulo" label="Titulo de la noticia"></v-text-field>
@@ -40,6 +41,7 @@
     </v-dialog>
   </v-row>
   </v-sheet>
+</v-container>
 </template>
   
 <script>
@@ -106,9 +108,9 @@ export default {
 
 </script>
 <style>
-.v-sheet{
-  padding:1em ;
-}
+.v-sheet.v-card{
+  padding: 1em;
+}	
 .classBien{color:green ;display:none}
 .classError{color:red;
   display: none;
